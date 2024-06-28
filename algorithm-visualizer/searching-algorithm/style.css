@@ -1,0 +1,119 @@
+/* /searching-alogarithm/style.css */
+* {
+  font-family: sans-serif;
+}
+body {
+  min-height: 100vh;
+}
+
+.bar-chart {
+  margin-top: 5vh;
+  background-color: #eee;
+  padding: 50px 20px 30px 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.bar-chart #chart {
+  text-align: center;
+}
+form {
+  margin-top: 20px;
+  text-align: center;
+}
+label {
+  font-size: 20px;
+  cursor: pointer;
+}
+input {
+  cursor: pointer;
+}
+rect:hover {
+  cursor: pointer;
+}
+.none {
+  display: none;
+}
+.stop {
+  background-image: linear-gradient(
+    to right,
+    #ad4a04 0%,
+    #d36756 51%,
+    #8f5a34 100%
+  );
+}
+footer {
+  width: 100%;
+  color: #8c8c8c;
+
+  margin: auto;
+  margin-top: 5vh;
+}
+
+footer p {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+footer .footer-text {
+  margin: auto;
+}
+
+footer .love {
+  color: red;
+}
+footer a {
+  color: #2e2e2e;
+}
+.sound {
+  text-align: right;
+}
+.sound a {
+  background: rgb(165, 115, 115);
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+.line-through {
+  text-decoration: line-through !important;
+}
+
+/* Additional styles for explanations */
+.explanation, .control-explanations, .visualization-guide {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.algorithm-explanations {
+  margin-top: 15px;
+}
+
+.color-box {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.color-box.blue { background-color: blue; }
+.color-box.yellow { background-color: yellow; }
+.color-box.green { background-color: green; }
+.color-box.red { background-color: red; }
+
+#step-explanation {
+  margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .form-inline {
+    flex-direction: column;
+  }
+  .form-inline > * {
+    margin-bottom: 10px;
+  }
+}

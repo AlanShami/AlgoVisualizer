@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Graph Algorithm visualizer using D3.js. It helps you understand graph algorithms with clear animations.">
+  <title>Graph Algorithm Visualizer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">Algo Visualizer</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../">Sorting Algo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../searching-algorithm/">Searching Algo</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#"> Graph Algorithm <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container mt-4">
+    <h2>Graph Algorithm Visualizer</h2>
+    <p>This visualizer demonstrates pathfinding and traversal algorithms on graphs.</p>
+    
+    <div class="row">
+      <div class="col-md-6">
+        <h3>How it works:</h3>
+        <ol>
+          <li>Generate a random graph or create a custom one.</li>
+          <li>Select an algorithm from the dropdown menu.</li>
+          <li>For pathfinding, select start and end nodes.</li>
+          <li>Click "Run" to start the visualization.</li>
+          <li>Use the speed slider to adjust the animation speed.</li>
+        </ol>
+      </div>
+      <div class="col-md-6">
+        <h3>Algorithm Types:</h3>
+        <ul>
+          <li><strong>Pathfinding:</strong> Finds the shortest path between two nodes.</li>
+          <li><strong>Traversal:</strong> Visits all nodes in a systematic way.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="form-inline mt-4">
+      <div class="form-group">
+        <select class="form-control" id="get-algo">
+          <option value="dijkstra" selected>Dijkstra's Algorithm (Pathfinding)</option>
+          <option value="dfs">Depth-First Search (Traversal)</option>
+          <option value="bfs">Breadth-First Search (Traversal)</option>
+        </select>
+      </div>
+      <div class="form-group mx-sm-3">
+        <button class="btn btn-primary" id="run">Run</button>
+      </div>
+      <div class="form-group">
+        <button class="btn none btn-danger" id="stop">Stop</button>
+      </div>
+    </div>
+    
+    <div class="row mt-3">
+      <div class="col-md-3">
+        <button class="btn btn-info" id="random-graph">
+          Generate Random Graph
+        </button>
+      </div>
+      <div class="col-md-3">
+        <label>
+          Speed:
+          <input type="range" id="speed" name="speed" min="100" max="800" value="300" onchange="setSpeed()">
+        </label>
+      </div>
+      <div class="col-md-6" id="node-selection">
+        <label for="start-node">Start Node:</label>
+        <select id="start-node" class="form-control"></select>
+        <label for="end-node">End Node:</label>
+        <select id="end-node" class="form-control"></select>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <h3>Custom Graph Input</h3>
+        <p>Enter nodes and edges in the format: "node1,node2,weight;node2,node3,weight;..."</p>
+        <textarea id="custom-graph-input" rows="4" class="form-control" placeholder="e.g., 0,1,1;1,2,2;2,3,3;3,0,4"></textarea>
+        <button class="btn btn-secondary mt-2" id="create-custom-graph">Create Custom Graph</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-4">
+    <div class="graph-visualization">
+      <div id="graph"></div>
+    </div>
+    <div id="algorithm-info" class="mt-3"></div>
+  </div>
+
+
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="base.js"></script>
+  <script src="function.js"></script>
+</body>
+</html>

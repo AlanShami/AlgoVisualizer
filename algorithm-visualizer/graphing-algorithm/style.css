@@ -1,0 +1,120 @@
+/* graphing-algorithm/style.css */
+* {
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.bar-chart {
+    margin-top: 5vh;
+    background-color: #eee;
+    padding: 50px 20px 30px 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.bar-chart #chart {
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+label {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+input {
+    cursor: pointer;
+}
+
+rect:hover {
+    cursor: pointer;
+}
+
+.none {
+    display: none;
+}
+
+.stop {
+    background-image: linear-gradient(to right, #ad4a04 0%, #d36756 51%, #8f5a34 100%);
+}
+
+footer {
+    width: 100%;
+    color: #8c8c8c;
+    margin: auto;
+    margin-top: 5vh;
+}
+
+footer p {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer .footer-text {
+    margin: auto;
+}
+
+footer .love {
+    color: red;
+}
+
+footer a {
+    color: #2e2e2e;
+}
+
+.sound {
+    text-align: right;
+}
+
+.sound a {
+    background: rgb(165, 115, 115);
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.line-through {
+    text-decoration: line-through !important;
+}
+
+.graph-visualization {
+    margin-top: 20px;
+}
+
+#graph {
+    width: 100%;
+    height: 500px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
+
+form-inline .form-group {
+    margin: 10px;
+}
+
+.node {
+    stroke: #fff;
+    stroke-width: 1.5px;
+}
+
+.link {
+    stroke-opacity: 0.6;
+}
+
+.weight {
+    font-size: 12px;
+}
+
+#algorithm-info {
+    font-weight: bold;
+    margin-top: 10px;
+}
